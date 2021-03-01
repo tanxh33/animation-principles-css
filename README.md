@@ -1,5 +1,5 @@
 # 12 Principles of Animation with CSS
-12 principles of animation illustrated with CSS.
+12 principles of animation illustrated with CSS. Check it out [here](https://tanxh33.github.io/animation-principles-css/).
 
 ## Original article
 - [Animation Principles for the Web — CSS Animation](https://cssanimation.rocks/principles/)
