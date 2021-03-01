@@ -1,0 +1,48 @@
+.five .shape {
+  animation: five 4s infinite cubic-bezier(.64,-0.36,.1,1);
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+.five .shape-container {
+  /* animation: five-container 4s infinite cubic-bezier(.64,-0.36,.1,2) ; */
+  animation: five-container 4s infinite cubic-bezier(.2, -0.6, 0.1, 2) ;
+  position: absolute;
+  left: calc(50% - 2em);
+  top: calc(50% - 2em);
+}
+
+@keyframes five {
+  0%, 15% {
+    opacity: 0;
+    transform: translateX(-12em);
+  }
+  15%, 25% {
+    transform: translateX(-12em);
+    opacity: 1;
+  }
+  85%, 90% {
+    transform: translateX(12em);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(12em);
+    opacity: 0;
+  }
+}
+
+@keyframes five-container {
+  0%, 25% {
+    transform: none;
+  }
+  50% {
+    transform: skewX(20deg);
+  }
+  65%, 75% {
+    transform: skewX(-20deg);
+  }
+  85%, 100% {
+    transform: none;
+  }
+}

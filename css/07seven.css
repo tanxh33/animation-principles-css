@@ -1,0 +1,101 @@
+.seven-a .shape-container {
+  animation: move-right 6s infinite cubic-bezier(.37,.55,.49,.67);
+  position: absolute;
+  left: calc(50% - 4em);
+  top: calc(50% - 4em);
+}
+
+.seven-a .shape {
+  animation: bounce 6s infinite linear;
+  border-radius: 50%;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(-14em);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: translateX(18em);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-8em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  15% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  25% {
+    transform: translateY(-4em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  32.5% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  40% {
+    transform: translateY(0em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  45% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  50% {
+    transform: translateY(3em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  56% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  60% {
+    transform: translateY(6em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  64% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+  66% {
+    transform: translateY(7.5em);
+    animation-timing-function: cubic-bezier(.51,.01,.79,.02);
+  }
+  70%, 100% {
+    transform: translateY(8em);
+    animation-timing-function: cubic-bezier(.19,1,.7,1);
+  }
+}
+
+.seven-b .shape.a {
+  animation: sevenb 3s infinite linear;
+  top: calc(50% - 2em);
+  left: calc(50% - 9em);
+  transform-origin: 8em 50%;
+}
+.seven-b .shape.b {
+  animation: sevenb 6s infinite linear reverse;
+  border-width: 0.25em;
+  background-color: gold;
+  width: 2em;
+  height: 2em;
+  left: calc(50% - 1em);
+  top: calc(50% - 1em);
+}
+
+@keyframes sevenb {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

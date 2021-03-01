@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/01one.css" />
+  <link rel="stylesheet" href="./css/02two.css" />
+  <link rel="stylesheet" href="./css/03three.css" />
+  <link rel="stylesheet" href="./css/04four.css" />
+  <link rel="stylesheet" href="./css/05five.css" />
+  <link rel="stylesheet" href="./css/06six.css" />
+  <link rel="stylesheet" href="./css/07seven.css" />
+  <link rel="stylesheet" href="./css/08eight.css" />
+  <link rel="stylesheet" href="./css/09nine.css" />
+  <link rel="stylesheet" href="./css/10ten.css" />
+  <link rel="stylesheet" href="./css/11eleven.css" />
+  <link rel="stylesheet" href="./css/12twelve.css" />
+  <title>12 Principles of Animation</title>
+</head>
+<body>
+  <header>
+    <h1>Twelve Principles of Animation</h1>
+  </header>
+
+  <div class="container grid">
+    <div id="principle1" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 1</h1>
+        <h2>Squash and Stretch</h2>
+        <div>
+          <p>Physical objects keep the same volume when moving, whether flexible or stiff.</p>
+          <p>If an object's length increases, the width (and depth) should decrease correspondingly.</p>
+          <p>This is important for anything that should feel like it has mass, although in software, you may not need to follow this strictly (like for an expanding button).</p>
+        </div>
+      </div>
+      <article class="one">
+        <div class="shape"></div>
+        <div class="surface"></div>
+      </article>
+    </div>
+
+    <div id="principle2" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 2</h1>
+        <h2>Anticipation</h2>
+        <div>
+          <p>Motion is usually preceded by some kind of build-up, whether it’s a ball beginning to roll before it falls off a table, or a person bending their knees in preparation to jump.</p>
+          <p>The "wind-up" before an action prepares the viewer for the main action.</p>
+          <p class="excess-text">This can also be used in more subtle ways, such as moving the camera's view to something that is about to happen, before it actually happens.</p>
+          <p>Try making objects shrink slightly before expanding, or tilt left before moving right.</p>
+        </div>
+      </div>
+      <article class="two">
+        <div class="shape"></div>
+        <div class="surface"></div>
+      </article>
+    </div>
+
+    <div id="principle3" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 3</h1>
+        <h2>Staging</h2>
+        <div>
+          <p>Staging is making sure an object is the focus of a scene. This can be done through its position, its colour, or size and shape.</p>
+          <p>A bright object placed in front of a dark page places turns it into the main focus.</p>
+          <p>One moving object (like a button) is much more obvious when nothing else is moving.</p>
+        </div>
+      </div>
+      <article class="three">
+        <div class="shape a"></div>
+        <div class="shape b"></div>
+        <div class="shape c"></div>
+      </article>
+    </div>
+
+    <div id="principle4" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 4</h1>
+        <h2>Straight Ahead Action and Pose to Pose</h2>
+        <div>
+          <p>Straight ahead action is when every frame of an animation is drawn. Pose to pose is when a series of keyframes are defined and the intervals filled in later.</p>
+          <p>Most web animation is pose to pose. The browser calculates the transition between keyframes, with the help of <span class="code-text">animation-timing-function</span> in CSS.</p>
+          <p class="excess-text">The steps() timing function lets you define discrete frames to be displayed in sequence, creating a “Straight Ahead Action” style.</p>
+        </div>
+      </div>
+      <article class="four">
+        <div class="shape a"></div>
+        <div class="shape b"></div>
+      </article>
+    </div>
+
+    <div id="principle5" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 5</h1>
+        <h2>Follow Through and Overlapping Action</h2>
+        <div>
+          <p>Most objects don't move together all at once. <span class="excess-text">Due to inertia, people inside a moving car tilt forward when it decelerates suddenly, and jerk back to the center of mass afterwards.</span></p>
+          <p>Overlapping action refers to different parts of a whole moving at different rates.</p>
+          <p>Try making screen elements animate at different times or speeds to create a more lifelike animation.</p>
+        </div>
+      </div>
+      <article class="five">
+        <div class="shape-container">
+          <div class="shape"></div>
+        </div>
+      </article>
+    </div>
+
+    <div id="principle6" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 6</h1>
+        <h2>Slow In and Slow Out</h2>
+        <div>
+          <p>Real world objects need time to accelerate and slow down. <span class="excess-text">In animation, this is done by drawing more frames at the beginning and end of an action, and less frames in the middle.</span></p>
+          <p>In CSS, timing functions like <span class="code-text">ease-in</span><span class="excess-text"> (slow start, speed up)</span>, <span class="code-text">ease-out</span><span class="excess-text"> (fast start, slow down)</span>, and <span class="code-text">cubic-bezier</span> define the rate of change during an animation.</p>
+          <p>Check out <a href="https://easings.net/" target="_blank">Easing Functions Cheat Sheet</a> for visualisations of timing functions.</p>
+        </div>
+      </div>
+      <article class="six">
+        <div class="shape"></div>
+      </article>
+    </div>
+
+    <div id="principle7a" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 7</h1>
+        <h2>Arc (1)</h2>
+        <div>
+          <p>Natural actions tend to follow an arched trajectory. <span class="excess-text">This could be an arm around a joint, or a thrown object flying in a parabola.</span> Exceptions are in mechanical movement.</p>
+          <p>Faster objects tend to have flatter, broader arcs.</p>
+          <p>This example uses one CSS animation to control the ball's horizontal movement, and another to control the vertical bouncing.</p>
+        </div>
+      </div>
+      <article class="seven-a">
+        <div class="shape-container">
+          <div class="shape"></div>
+        </div>
+      </article>
+    </div>
+
+    <div id="principle7b" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 7</h1>
+        <h2>Arc (2)</h2>
+        <div>
+          <p>Another way to create arcs in CSS is with rotations.</p>
+          <p>You can use the <span class="code-text">transform-origin</span> property to shift the center of rotation outside of the element.</p>
+        </div>
+      </div>
+      <article class="seven-b">
+        <div class="shape-container">
+          <div class="shape a"></div>
+          <div class="shape b"></div>
+        </div>
+      </article>
+    </div>
+
+    <div id="principle8" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 8</h1>
+        <h2>Secondary Action</h2>
+        <div>
+          <p>Secondary actions can help emphasise the primary action. A walking person can swing their arms <span class="excess-text">, tilt their head </span>or show facial expressions.</p>
+          <p>Be careful not to let them take attention away from the main action.</p>
+          <p>An example of secondary action on web pages is moving other elements away when dragging and dropping an item.</p>
+        </div>
+      </div>
+      <article class="eight">
+        <div class="shape a"></div>
+        <div class="shape b"></div>
+        <div class="shape c"></div>
+      </article>
+    </div>
+
+    <div id="principle9" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 9</h1>
+        <h2>Timing</h2>
+        <div>
+          <p>Timing refers to how long it takes for an action to complete. <span class="excess-text">Correct timing makes objects appear to obey the laws of physics.</span></p>
+          <p>Adjusting the timing can make an object appear heavier or lighter<span class="excess-text">, or add character and emotion to its behaviour</span>. This can be achieved with <span class="code-text">animation-duration</span> or <span class="code-text">transition-duration</span>, or modifying individual keyframes.</p>
+          <p>Interface animations that are too fast (&lt;100ms) could be imperceptible, while being too slow (&gt;500ms) could make it feel clunky.</p>
+        </div>
+      </div>
+      <article class="nine">
+        <div class="shape a"></div>
+        <div class="shape b"></div>
+      </article>
+    </div>
+
+    <div id="principle10" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 10</h1>
+        <h2>Exaggeration</h2>
+        <div>
+          <p>Animation, especially in cartoons, tends to exaggerate certain things (movement, expressions) to make it feel more dramatic than what reality can provide.</p>
+          <p>Exaggerating certain animations can draw extra attention to it. Overdo it, however, and too many things on screen could be screaming for attention, and you risk confusing the user.</p>
+          <!-- <p>Placeholder text.</p> -->
+        </div>
+      </div>
+      <article class="ten">
+        <div class="shape"></div>
+      </article>
+    </div>
+
+    <div id="principle11" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 11</h1>
+        <h2>Solid Drawing</h2>
+        <div>
+          <p><em>Solid</em> drawing takes into account forms in 3D space, giving them volume and weight, as opposed to a flat 2D shape. <span class="excess-text">Skilled animators take into account form, anatomy, weight, interaction with light and shadow, etc.</span></p>
+          <p>Most modern browsers support 3D transforms<span class="excess-text">, so in most cases we can let the browser do the linear algebra for us</span>. This example makes use of CSS 3D transform methods like <span class="code-text">rotate</span>, <span class="code-text">translate</span>, and the <span class="code-text">perspective</span> property.</p>
+        </div>
+      </div>
+      <article class="eleven">
+        <div class="shape">
+          <div class="shape-container">
+            <span class="front"></span>
+            <span class="back"></span>
+            <span class="left"></span>
+            <span class="right"></span>
+            <span class="top"></span>
+            <span class="bottom"></span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div id="principle12" class="card">
+      <div class="overlay"></div>
+      <div class="card-text">
+        <h1>Principle 12</h1>
+        <h2>Appeal</h2>
+        <div>
+          <p>An appealing character feels real and interesting to the viewer. Animators do this through composition, poses, character design, attention to detail, etc., although appeal is not just limited to visual design.</p>
+          <p>Carefully crafted animations can add appeal to a website or app's experience.</p>
+        </div>
+      </div>
+      <article class="twelve">
+        <div class="shape">
+          <div class="shape-container">
+            <span class="item one"></span>
+            <span class="item two"></span>
+            <span class="item three"></span>
+            <span class="item four"></span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer class="credits">
+      <p>Original article</p>
+      <ul>
+        <li>
+          <a href="https://cssanimation.rocks/principles/" target="_blank">Animation Principles for the Web &mdash; CSS Animation</a>
+        </li>
+      </ul>
+
+      <p>Additional references</p>
+      <ul>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation" target="_blank">Disney's twelve basic principles of animation &mdash; Wikipedia</a>
+        </li>
+        <li>
+          <a href="https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9" target="_blank">The ultimate guide to proper use of animation in UX &mdash; Medium</a>
+        </li>
+      </ul>
+
+      <p>Code</p>
+      <ul>
+        <li>
+          <a href="https://github.com/tanxh33/" target="_blank">GitHub repository</a>
+        </li>
+      </ul>
+
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

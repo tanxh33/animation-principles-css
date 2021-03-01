@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400&display=swap');
+
+:root {
+  --max-width: 1400px;
+  --primary: #3c8558;
+  --primary-light: #398b4b;
+  --primary-dark: #2f553e;
+  --background-col: #202b24;
+  --text-col: #e5fae8;
+  --text-col-hover: #abf88c;
+  --code-col: #ffffff40;
+  --header-font: 'Roboto Condensed', Helvetica, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-col);
+  font-family: 'Roboto', Helvetica, Verdana, sans-serif;
+}
+
+a {
+  color: var(--text-col);
+  transition: color 0.1s ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--text-col-hover);
+}
+
+header {
+  margin-top: 32px;
+}
+
+header h1 {
+  font-size: 40px;
+  font-family: var(--header-font);
+  font-weight: 400;
+  color: var(--text-col);
+  text-align: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.code-text {
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--code-col);
+  border-radius: 4px;
+  padding: 1px 2px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 32px auto 64px;
+  padding: 0 32px;
+}
+
+.card,
+.credits {
+  height: 400px;
+  border-radius: 4px;
+  position: relative;
+  opacity: 1;
+  transition: background 0.15s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  color: var(--text-col);
+}
+
+/* Prevent text selection */
+.card {
+  cursor: pointer;
+  background: var(--primary);
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.card:hover {
+  background: var(--primary-light);
+}
+
+.card .overlay {
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card .overlay.show {
+  opacity: 0.7;
+}
+
+.card.bg-dark {
+  background: var(--primary-dark);
+}
+
+.card-text {
+  text-align: start;
+  padding: 0 2rem;
+}
+
+.card-text > div {
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-text > div.show {
+  opacity: 1;
+}
+
+.card-text > div p {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+  font-size: 14px;
+  display: none;
+}
+
+.card-text > div.show p {
+  display: block;
+}
+
+.card h1,
+.card h2 {
+  text-align: center;
+  font-family: var(--header-font);
+  font-weight: 400;
+  position: relative;
+  z-index: 3;
+}
+
+.card h1 {
+  margin-top: 32px;
+  font-size: 32px;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.card article {
+  top: 60%;
+  left: 50%;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.shape {
+  background: #2d97db;
+  border: 0.5em solid #fff;
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
+}
+
+.credits {
+  padding: 2rem;
+  border: 3px solid var(--primary-dark);
+  font-size: 14px;
+}
+
+.credits p {
+  font-size: 20px;
+  font-family: var(--header-font);
+  margin-bottom: 0.5rem;
+}
+
+.credits ul {
+  margin-bottom: 1rem;
+}
+
+.credits li {
+  list-style-type: square;
+  margin-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Media queries */
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  .card h1 {
+    font-size: 28px;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card,
+  .credits {
+    height: 300px;
+  }
+
+  .card h1 {
+    margin-top: 16px;
+    font-size: 24px;
+  }
+
+  .card h2 {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .card article {
+    transform: scale(0.75);
+  }
+
+  .card-text > div p {
+    line-height: 1.5;
+    font-size: 13px;
+  }
+
+  .credits p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .card,
+  .credits {
+    height: 250px;
+  }
+
+  .card-text {
+    padding: 0 1rem;
+  }
+
+  .card article {
+    transform: scale(0.50);
+  }
+
+  .excess-text {
+    display: none;
+  }
+
+  .card-text > div p {
+    font-size: 12px;
+  }
+
+  .card-text > div.show .excess-text {
+    display: none;
+  }
+
+  .credits {
+    padding: 1rem;
+    font-size: 12px;
+  }
+}
